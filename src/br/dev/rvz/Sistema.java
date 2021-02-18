@@ -13,7 +13,7 @@ public class Sistema {
     private static Fatura pesquisarFatura() throws Exception {
         System.out.println("Digite o email: ");
         String email = new Scanner(System.in).nextLine();
-        return ServicoFAtura.pesquisarFaturaPeloEmailDoConsumidor(email);
+        return ServicoFatura.pesquisarFaturaPeloEmailDoConsumidor(email);
     }
 
     private static Consumidor cadastrarConsumidor() throws Exception {

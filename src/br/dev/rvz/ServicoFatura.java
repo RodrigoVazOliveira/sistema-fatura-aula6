@@ -3,7 +3,7 @@ package br.dev.rvz;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ServicoFAtura {
+public class ServicoFatura {
     private static List<Fatura> faturas = new ArrayList<>();
 
     public static Fatura pesquisarFaturaPeloEmailDoConsumidor(String email) throws Exception {
