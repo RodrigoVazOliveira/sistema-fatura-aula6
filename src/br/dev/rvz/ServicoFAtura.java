@@ -6,13 +6,12 @@ import java.util.List;
 public class ServicoFAtura {
     private static List<Fatura> faturas = new ArrayList<>();
 
-    public static Fatura pesquisarFaturaPeloEmailDoConsumidor(String email) {
-        Fatura faturaRetorno = null;
+    public static Fatura pesquisarFaturaPeloEmailDoConsumidor(String email) throws Exception {
         for(Fatura fatura : faturas) {
             if (fatura.getConsumidor().getEmail().equalsIgnoreCase(email)) {
-                faturaRetorno = fatura;
+                return  fatura;
             }
         }
-        return faturaRetorno;
+        throw new Exception("Fatura não existe!");
     }
 }
