@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class Sistema {
     public static void menu() {
         String mensagem = "1. Pesquisar por e-mail o consumidor\n";
-        mensagem += "2. Cadastrar novo consumidor";
+        mensagem += "2. Cadastrar novo consumidor\n";
+        mensagem += "3. Cadastrar fatura"
         System.out.println(mensagem);
     }
 
