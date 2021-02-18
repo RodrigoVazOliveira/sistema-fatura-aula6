@@ -23,19 +23,21 @@ public class Sistema {
         return  consumidor;
     }
 
-    public static void executar() throws Exception {
+    public static boolean executar() throws Exception {
         boolean continuar = true;
-
         while (continuar) {
             menu();
             String resposta = new Scanner(System.in).nextLine();
 
             if (resposta.equals("1")) {
                 Fatura fatura = pesquisarFatura();
+                System.out.println(fatura);
             } else if (resposta.equals("2")) {
-
+                Consumidor consumidor = cadastrarConsumidor();
+                System.out.println(consumidor);
             }
         }
+        return continuar;
     }
 
 }
