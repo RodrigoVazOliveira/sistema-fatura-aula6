@@ -43,6 +43,9 @@ public class Sistema {
             } else if (resposta.equals("2")) {
                 Consumidor consumidor = cadastrarConsumidor();
                 System.out.println(consumidor);
+            } else if (resposta.equals("3")) {
+                Fatura fatura = cadastrarFatura();
+                System.out.println(fatura);
             }
         }
         return continuar;
