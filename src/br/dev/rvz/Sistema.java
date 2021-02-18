@@ -16,6 +16,13 @@ public class Sistema {
         return ServicoFAtura.pesquisarFaturaPeloEmailDoConsumidor(email);
     }
 
+    private static Consumidor cadastrarConsumidor() throws Exception {
+        System.out.println("Por favor, digite o nome completo e o email: ");
+        Consumidor consumidor = ServicoConsumidor.cadastrarConsumidor(new Scanner(System.in).nextLine(),
+                new Scanner(System.in).nextLine());
+        return  consumidor;
+    }
+
     public static void executar() throws Exception {
         boolean continuar = true;
 
@@ -26,7 +33,7 @@ public class Sistema {
             if (resposta.equals("1")) {
                 Fatura fatura = pesquisarFatura();
             } else if (resposta.equals("2")) {
-                
+
             }
         }
     }
