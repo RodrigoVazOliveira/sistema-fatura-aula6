@@ -23,6 +23,13 @@ public class Sistema {
         return  consumidor;
     }
 
+    private static Fatura cadastrarFatura() throws Exception {
+        System.out.println("Por favor, digite o email, valor e data de vencimento:");
+        ServicoFatura.cadastrarFatura(new Scanner(System.in).nextLine(),
+                new Scanner(System.in).nextDouble(),
+                new Scanner(System.in).nextLine());
+    }
+
     public static boolean executar() throws Exception {
         boolean continuar = true;
         while (continuar) {
