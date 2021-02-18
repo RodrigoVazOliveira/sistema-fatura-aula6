@@ -15,4 +15,17 @@ public class Sistema {
         return ServicoFAtura.pesquisarFaturaPeloEmailDoConsumidor(email);
     }
 
+    public static void executar() throws Exception {
+        boolean continuar = true;
+
+        while (continuar) {
+            menu();
+            String resposta = new Scanner(System.in).nextLine();
+
+            if (resposta.equals("1")) {
+                Fatura fatura = pesquisarFatura();
+            }
+        }
+    }
+
 }
