@@ -41,7 +41,7 @@ public class Sistema {
             String resposta = new Scanner(System.in).nextLine();
 
             if (resposta.equals("1")) {
-                Fatura fatura = pesquisarFatura();
+                List<Fatura> fatura = pesquisarFatura();
                 System.out.println(fatura);
             } else if (resposta.equals("2")) {
                 Consumidor consumidor = cadastrarConsumidor();
