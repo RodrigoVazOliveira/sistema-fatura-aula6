@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Sistema {
     public static void menu() {
         String mensagem = "1. Pesquisar por e-mail o consumidor\n";
+        mensagem += "2. Cadastrar novo consumidor";
         System.out.println(mensagem);
     }
 
@@ -24,6 +25,8 @@ public class Sistema {
 
             if (resposta.equals("1")) {
                 Fatura fatura = pesquisarFatura();
+            } else if (resposta.equals("2")) {
+                
             }
         }
     }
