@@ -37,7 +37,7 @@ public class Fatura {
 
     @Override
     public String toString() {
-        return "Fatura{" +
+        return "\nFatura{" +
                 "consumidor=" + consumidor +
                 ", valor=" + valor +
                 ", dataVencimento='" + dataVencimento + '\'' +
