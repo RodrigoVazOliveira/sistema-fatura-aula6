@@ -1,5 +1,6 @@
 package br.dev.rvz;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Sistema {
@@ -12,7 +13,7 @@ public class Sistema {
     }
 
 
-    private static Fatura pesquisarFatura() throws Exception {
+    private static List<Fatura> pesquisarFatura() throws Exception {
         System.out.println("Digite o email: ");
         String email = new Scanner(System.in).nextLine();
         return ServicoFatura.pesquisarFaturaPeloEmailDoConsumidor(email);
