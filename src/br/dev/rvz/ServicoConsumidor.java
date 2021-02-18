@@ -23,4 +23,14 @@ public class ServicoConsumidor {
             }
         }
     }
+
+    public static Consumidor pesquisarConsumidorPorEmail(String email) throws Exception{
+        validarEmail(email);
+        for (Consumidor consumidor : consumidores ) {
+            if (consumidor.getEmail().equalsIgnoreCase(email)) {
+                return consumidor;
+            }
+        }
+        throw new Exception("Nenhum consumidor foi localizado com e-mail " + email);
+    }
 }
