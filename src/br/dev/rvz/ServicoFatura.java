@@ -15,8 +15,8 @@ public class ServicoFatura {
         throw new Exception("Fatura não existe!");
     }
 
-    public static Fatura cadastrarFatura(Consumidor consumidor, double valor, String dataVemcimento) throws Exception {
-        ServicoConsumidor.pesquisarConsumidorPorEmail(consumidor.getEmail());
+    public static Fatura cadastrarFatura(String email, double valor, String dataVemcimento) throws Exception {
+        Consumidor consumidor = ServicoConsumidor.pesquisarConsumidorPorEmail(email);
         Fatura fatura = new Fatura(consumidor, valor, dataVemcimento);
         faturas.add(fatura);
         return fatura;
