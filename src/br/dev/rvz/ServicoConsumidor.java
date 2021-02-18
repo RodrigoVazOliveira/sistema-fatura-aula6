@@ -6,6 +6,13 @@ import java.util.List;
 public class ServicoConsumidor {
     private static List<Consumidor> consumidores = new ArrayList<>();
 
+    public static Consumidor cadastrarConsumidor(String nomeCompleto, String email) throws Exception {
+        validarEmail(email);
+        Consumidor consumidor = new Consumidor(nomeCompleto, email);
+        consumidores.add(consumidor);
+        return consumidor;
+    }
+
     public static void validarEmail(String email) throws Exception {
         if (!email.contains("@")){
             throw new Exception("e-mail inválido!");
