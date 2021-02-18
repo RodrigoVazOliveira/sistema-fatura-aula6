@@ -6,7 +6,7 @@ public class Sistema {
     public static void menu() {
         String mensagem = "1. Pesquisar por e-mail o consumidor\n";
         mensagem += "2. Cadastrar novo consumidor\n";
-        mensagem += "3. Cadastrar fatura"
+        mensagem += "3. Cadastrar fatura";
         System.out.println(mensagem);
     }
 
@@ -26,9 +26,10 @@ public class Sistema {
 
     private static Fatura cadastrarFatura() throws Exception {
         System.out.println("Por favor, digite o email, valor e data de vencimento:");
-        ServicoFatura.cadastrarFatura(new Scanner(System.in).nextLine(),
+        Fatura fatura = ServicoFatura.cadastrarFatura(new Scanner(System.in).nextLine(),
                 new Scanner(System.in).nextDouble(),
                 new Scanner(System.in).nextLine());
+        return fatura;
     }
 
     public static boolean executar() throws Exception {
