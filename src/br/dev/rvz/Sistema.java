@@ -6,7 +6,7 @@ public class Sistema {
     public static void menu() {
         String mensagem = "1. Pesquisar por e-mail o consumidor\n";
         mensagem += "2. Cadastrar novo consumidor\n";
-        mensagem += "3. Cadastrar fatura";
+        mensagem += "3. Cadastrar fatura\n";
         mensagem += "4. Sair";
         System.out.println(mensagem);
     }

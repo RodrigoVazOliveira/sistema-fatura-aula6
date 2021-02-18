@@ -8,7 +8,7 @@ public class Main {
        boolean continuar = true;
        while (continuar) {
            try {
-               Sistema.executar();
+               continuar = Sistema.executar();
            } catch (Exception e) {
                System.out.println(e.getMessage());
            }
