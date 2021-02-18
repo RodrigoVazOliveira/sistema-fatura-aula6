@@ -34,4 +34,13 @@ public class Fatura {
     public void setDataVencimento(String dataVencimento) {
         this.dataVencimento = dataVencimento;
     }
+
+    @Override
+    public String toString() {
+        return "Fatura{" +
+                "consumidor=" + consumidor +
+                ", valor=" + valor +
+                ", dataVencimento='" + dataVencimento + '\'' +
+                '}';
+    }
 }
