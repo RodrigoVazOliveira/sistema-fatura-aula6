@@ -7,6 +7,7 @@ public class Sistema {
         String mensagem = "1. Pesquisar por e-mail o consumidor\n";
         mensagem += "2. Cadastrar novo consumidor\n";
         mensagem += "3. Cadastrar fatura";
+        mensagem += "4. Sair";
         System.out.println(mensagem);
     }
 
@@ -47,6 +48,8 @@ public class Sistema {
             } else if (resposta.equals("3")) {
                 Fatura fatura = cadastrarFatura();
                 System.out.println(fatura);
+            } else if (resposta.equals("4")) {
+                continuar = false;
             }
         }
         return continuar;
