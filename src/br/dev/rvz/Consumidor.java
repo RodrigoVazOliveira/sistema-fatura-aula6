@@ -3,14 +3,14 @@ package br.dev.rvz;
 public class Consumidor {
 
     private String nomeCompleto;
-    private String cpf;
+    private String email;
 
     public Consumidor() {
     }
 
     public Consumidor(String nomeCompleto, String cpf) {
         this.nomeCompleto = nomeCompleto;
-        this.cpf = cpf;
+        this.email = cpf;
     }
 
     public String getNomeCompleto() {
@@ -21,11 +21,11 @@ public class Consumidor {
         this.nomeCompleto = nomeCompleto;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getEmail() {
+        return email;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
