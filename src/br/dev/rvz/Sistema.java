@@ -8,7 +8,9 @@ public class Sistema {
         String mensagem = "1. Pesquisar por e-mail o consumidor\n";
         mensagem += "2. Cadastrar novo consumidor\n";
         mensagem += "3. Cadastrar fatura\n";
-        mensagem += "4. Sair";
+        mensagem += "4. Sair \n";
+        mensagem += "5. Gravar consumidores no arquivo\n";
+        mensagem += "6. Gravar faturas no arquivo.";
         System.out.println(mensagem);
     }
 
