@@ -30,7 +30,7 @@ public class ServicoFatura {
         return fatura;
     }
 
-    public static void gravarFaturas() throws IOException {
+    public static void gravarListaDeFaturaNoArquivo() throws IOException {
         GravarDados.gravarFatura(faturas);
     }
 }
