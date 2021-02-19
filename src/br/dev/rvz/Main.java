@@ -16,7 +16,7 @@ public class Main {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        
+
         while (continuar) {
            try {
                continuar = Sistema.executar();
