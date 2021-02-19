@@ -18,5 +18,16 @@ public class GravarDados {
         }
     }
 
- 
+    public static void gravarFatura(Fatura fatura) throws IOException {
+        File file = new File(StoreData.FATURA.getNameFile());
+        if (file.createNewFile()) {
+            FileWriter fileWriter = new FileWriter(StoreData.FATURA.getNameFile(), true);
+            fileWriter.write(fatura + "\n");
+            fileWriter.close();
+        } else {
+            FileWriter fileWriter = new FileWriter(StoreData.FATURA.getNameFile(), true);
+            fileWriter.write(fatura + "\n");
+            fileWriter.close();
+        }
+    }
 }
