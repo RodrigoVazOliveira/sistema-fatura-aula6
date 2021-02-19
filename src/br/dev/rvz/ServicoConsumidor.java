@@ -37,4 +37,8 @@ public class ServicoConsumidor {
     public static void gravarListaConsumidorNoArquivo() throws IOException {
         BancoDados.gravarConsumidor(consumidores);
     }
+
+    public static void lerDadosConsumidor() throws IOException, ClassNotFoundException {
+        consumidores = BancoDados.lerConsumidor();
+    }
 }
