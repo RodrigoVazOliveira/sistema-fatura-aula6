@@ -53,6 +53,10 @@ public class Sistema {
                 System.out.println(fatura);
             } else if (resposta.equals("4")) {
                 continuar = false;
+            } else if (resposta.equals("5")) {
+                ServicoConsumidor.gravarListaConsumidorNoArquivo();
+            } else if (resposta.equals("6")) {
+                ServicoFatura.gravarListaDeFaturaNoArquivo();
             }
         }
         return continuar;
