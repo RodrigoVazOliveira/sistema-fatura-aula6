@@ -34,7 +34,7 @@ public class BancoDados {
             objectInputStream.close();
             return lista;
         } else {
-            throw new IOException("Arquivo não existe!");
+            throw new IOException("Arquivo não existe mas será criado ao sair do sistema!");
         }
     }
 
@@ -49,7 +49,7 @@ public class BancoDados {
             objectInputStream.close();
             return lista;
         } else {
-            throw new IOException("Arquivo não existe!");
+            throw new IOException("Arquivo não existe mas será criado ao sair do sistema!");
         }
     }
 }

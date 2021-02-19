@@ -12,9 +12,9 @@ public class Main {
             ServicoConsumidor.lerDadosConsumidor();
             ServicoFatura.lerDadosFatura();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
 
         while (continuar) {
