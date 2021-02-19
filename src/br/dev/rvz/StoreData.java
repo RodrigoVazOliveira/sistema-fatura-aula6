@@ -7,5 +7,8 @@ public enum StoreData {
     StoreData(String nameFile) {
         this.nameFile = nameFile;
     }
-    
+
+    public String getNameFile() {
+        return nameFile;
+    }
 }
