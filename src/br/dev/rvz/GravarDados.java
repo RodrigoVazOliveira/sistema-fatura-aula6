@@ -1,33 +1,25 @@
 package br.dev.rvz;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.util.List;
+import java.util.concurrent.CompletionService;
 
 public class GravarDados {
-    public static void gravarConsumidor(Consumidor consumidor) throws IOException {
+    public static void gravarConsumidor(List<CompletionService> listaConsumidor) throws IOException {
         File file = new File(StoreData.CONSUMIDOR.getNameFile());
-        if (file.createNewFile()) {
-            FileWriter fileWriter = new FileWriter(StoreData.CONSUMIDOR.getNameFile(), true);
-            fileWriter.write(consumidor + "\n");
-            fileWriter.close();
-        } else {
-            FileWriter fileWriter = new FileWriter(StoreData.CONSUMIDOR.getNameFile(), true);
-            fileWriter.write(consumidor + "\n");
-            fileWriter.close();
-        }
+        file.createNewFile();
+        ObjectOutputStream objectOutputStream = new ObjectOutputStream(
+                new FileOutputStream(StoreData.CONSUMIDOR.getNameFile()));
+        objectOutputStream.writeObject(listaConsumidor);
+        objectOutputStream.close();
     }
 
-    public static void gravarFatura(Fatura fatura) throws IOException {
+    public static void gravarFatura(List<Fatura> listaFatura) throws IOException {
         File file = new File(StoreData.FATURA.getNameFile());
-        if (file.createNewFile()) {
-            FileWriter fileWriter = new FileWriter(StoreData.FATURA.getNameFile(), true);
-            fileWriter.write(fatura + "\n");
-            fileWriter.close();
-        } else {
-            FileWriter fileWriter = new FileWriter(StoreData.FATURA.getNameFile(), true);
-            fileWriter.write(fatura + "\n");
-            fileWriter.close();
-        }
+        file.createNewFile();
+        ObjectOutputStream objectOutputStream = new ObjectOutputStream(
+                new FileOutputStream(StoreData.FATURA.getNameFile()));
+        objectOutputStream.writeObject(listaFatura);
+        objectOutputStream.close();
     }
 }

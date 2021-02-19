@@ -1,0 +1,2 @@
+Consumidor{nomeCompleto='Rodrigo Vaz', email='rodrigo@zup.com.br'}
+Consumidor{nomeCompleto='Renata Graciela', email='renata.graciela@zup.com.br'}

@@ -1,0 +1,4 @@
+
+Fatura{consumidor=Consumidor{nomeCompleto='Rodrigo Vaz', email='rodrigo@zup.com.br'}, valor=3112.12312, dataVencimento='12/1/2021'}
+
+Fatura{consumidor=Consumidor{nomeCompleto='Rodrigo Vaz', email='rodrigo@zup.com.br'}, valor=13123.341231, dataVencimento='11/12/2021'}
