@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.concurrent.CompletionService;
 
 public class GravarDados {
-    public static void gravarConsumidor(List<CompletionService> listaConsumidor) throws IOException {
+    public static void gravarConsumidor(List<Consumidor> listaConsumidor) throws IOException {
         File file = new File(StoreData.CONSUMIDOR.getNameFile());
         file.createNewFile();
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(
