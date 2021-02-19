@@ -35,6 +35,6 @@ public class ServicoConsumidor {
     }
 
     public static void gravarListaConsumidorNoArquivo() throws IOException {
-        GravarDados.gravarConsumidor(consumidores);
+        BancoDados.gravarConsumidor(consumidores);
     }
 }

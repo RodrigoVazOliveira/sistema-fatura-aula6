@@ -1,10 +1,10 @@
 package br.dev.rvz;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.CompletionService;
 
-public class GravarDados {
+public class BancoDados {
     public static void gravarConsumidor(List<Consumidor> listaConsumidor) throws IOException {
         File file = new File(StoreData.CONSUMIDOR.getNameFile());
         file.createNewFile();
@@ -21,5 +21,18 @@ public class GravarDados {
                 new FileOutputStream(StoreData.FATURA.getNameFile()));
         objectOutputStream.writeObject(listaFatura);
         objectOutputStream.close();
+    }
+
+    public static List<Fatura> lerFaturas() throws IOException {
+        List<Fatura> lista = new ArrayList<>();
+        File file = new File(StoreData.FATURA.getNameFile());
+        if (file.exists()) {
+            ObjectInputStream objectInputStream = new ObjectInputStream(
+                    new FileInputStream(file)
+            );
+            lista = (List<Fatura>) objectInputStream.readObject();
+        } else {
+            throw new IOException("Arquivo não existe!");
+        }
     }
 }

@@ -31,6 +31,6 @@ public class ServicoFatura {
     }
 
     public static void gravarListaDeFaturaNoArquivo() throws IOException {
-        GravarDados.gravarFatura(faturas);
+        BancoDados.gravarFatura(faturas);
     }
 }
