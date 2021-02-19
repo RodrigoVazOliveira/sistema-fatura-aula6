@@ -1,6 +1,8 @@
 package br.dev.rvz;
 
-public class Fatura {
+import java.io.Serializable;
+
+public class Fatura implements Serializable {
     private Consumidor consumidor;
     private double valor;
     private String dataVencimento;

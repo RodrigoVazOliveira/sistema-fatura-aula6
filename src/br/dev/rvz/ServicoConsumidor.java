@@ -1,5 +1,6 @@
 package br.dev.rvz;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,5 +32,13 @@ public class ServicoConsumidor {
             }
         }
         throw new Exception("Nenhum consumidor foi localizado com e-mail " + email);
+    }
+
+    public static void gravarListaConsumidorNoArquivo() throws IOException {
+        BancoDados.gravarConsumidor(consumidores);
+    }
+
+    public static void lerDadosConsumidor() throws IOException, ClassNotFoundException {
+        consumidores = BancoDados.lerConsumidor();
     }
 }

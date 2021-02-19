@@ -1,5 +1,6 @@
 package br.dev.rvz;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -28,5 +29,13 @@ public class ServicoFatura {
         Fatura fatura = new Fatura(consumidor, valor, dataVemcimento);
         faturas.add(fatura);
         return fatura;
+    }
+
+    public static void gravarListaDeFaturaNoArquivo() throws IOException {
+        BancoDados.gravarFatura(faturas);
+    }
+
+    public static void lerDadosFatura() throws IOException, ClassNotFoundException {
+        faturas = BancoDados.lerFaturas();
     }
 }
