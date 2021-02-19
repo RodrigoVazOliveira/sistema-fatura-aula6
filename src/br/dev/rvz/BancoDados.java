@@ -23,7 +23,7 @@ public class BancoDados {
         objectOutputStream.close();
     }
 
-    public static List<Fatura> lerFaturas() throws IOException {
+    public static List<Fatura> lerFaturas() throws IOException, ClassNotFoundException {
         List<Fatura> lista = new ArrayList<>();
         File file = new File(StoreData.FATURA.getNameFile());
         if (file.exists()) {
@@ -31,6 +31,23 @@ public class BancoDados {
                     new FileInputStream(file)
             );
             lista = (List<Fatura>) objectInputStream.readObject();
+            objectInputStream.close();
+            return lista;
+        } else {
+            throw new IOException("Arquivo não existe!");
+        }
+    }
+
+    public static List<Consumidor> lerConsumidor() throws IOException, ClassNotFoundException {
+        List<Consumidor> lista = new ArrayList<>();
+        File file = new File(StoreData.CONSUMIDOR.getNameFile());
+        if (file.exists()) {
+            ObjectInputStream objectInputStream = new ObjectInputStream(
+                    new FileInputStream(file)
+            );
+            lista = (List<Consumidor>) objectInputStream.readObject();
+            objectInputStream.close();
+            return lista;
         } else {
             throw new IOException("Arquivo não existe!");
         }
