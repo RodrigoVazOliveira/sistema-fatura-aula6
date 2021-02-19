@@ -9,7 +9,6 @@ public class ServicoConsumidor {
     public static Consumidor cadastrarConsumidor(String nomeCompleto, String email) throws Exception {
         validarEmail(email);
         Consumidor consumidor = new Consumidor(nomeCompleto, email);
-        GravarDados.gravarConsumidor(consumidor);
         consumidores.add(consumidor);
         return consumidor;
     }
