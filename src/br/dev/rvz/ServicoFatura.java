@@ -25,6 +25,7 @@ public class ServicoFatura {
     public static Fatura cadastrarFatura(String email, double valor, String dataVemcimento) throws Exception {
         Consumidor consumidor = ServicoConsumidor.pesquisarConsumidorPorEmail(email);
         Fatura fatura = new Fatura(consumidor, valor, dataVemcimento);
+        GravarDados.gravarFatura(fatura);
         faturas.add(fatura);
         return fatura;
     }
