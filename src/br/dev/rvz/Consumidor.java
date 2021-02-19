@@ -1,6 +1,8 @@
 package br.dev.rvz;
 
-public class Consumidor {
+import java.io.Serializable;
+
+public class Consumidor implements Serializable {
 
     private String nomeCompleto;
     private String email;
