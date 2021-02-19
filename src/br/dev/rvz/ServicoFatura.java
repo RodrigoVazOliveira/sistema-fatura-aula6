@@ -9,7 +9,8 @@ public class ServicoFatura {
 
     public static List<Fatura> pesquisarFaturaPeloEmailDoConsumidor(String email) throws Exception {
         List<Fatura> faturasConsumidor = new ArrayList<>();
-        faturasConsumidor = faturas.stream().filter(obj -> obj.getConsumidor().getEmail().equals(email)).collect(Collectors.toList());
+        faturasConsumidor = faturas.stream().filter(obj -> obj.getConsumidor().getEmail().equals(email))
+                .collect(Collectors.toList());
 /*        for(Fatura fatura : faturas) {
             if (fatura.getConsumidor().getEmail().equalsIgnoreCase(email)) {
                 faturasConsumidor.add(fatura);
