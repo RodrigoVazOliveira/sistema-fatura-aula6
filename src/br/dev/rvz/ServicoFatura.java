@@ -33,4 +33,8 @@ public class ServicoFatura {
     public static void gravarListaDeFaturaNoArquivo() throws IOException {
         BancoDados.gravarFatura(faturas);
     }
+
+    public static void lerDadosFatura() throws IOException, ClassNotFoundException {
+        faturas = BancoDados.lerFaturas();
+    }
 }
