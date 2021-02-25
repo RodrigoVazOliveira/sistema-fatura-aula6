@@ -4,6 +4,17 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Sistema {
+
+    private static boolean executar = true;
+
+    public static void setExecutar(boolean executar) {
+        Sistema.executar = executar;
+    }
+
+    public static boolean isExecutar() {
+        return executar;
+    }
+
     public static void menu() {
         String mensagem = "1. Pesquisar por e-mail o consumidor\n";
         mensagem += "2. Cadastrar novo consumidor\n";
@@ -12,14 +23,12 @@ public class Sistema {
         System.out.println(mensagem);
     }
 
-    public static boolean executar() throws Exception {
-        boolean continuar = true;
+    public static void executar() throws Exception {
         Controle controle = new Controle();
-        while (continuar) {
+        while (executar) {
             menu();
             controle.selecionarOpcao(new Scanner(System.in).nextLine());
         }
-        return continuar;
     }
 
 }
