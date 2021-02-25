@@ -19,7 +19,8 @@ public class Main {
 
         while (continuar) {
            try {
-               continuar = Sistema.executar();
+               continuar = Sistema.isExecutar();
+               Sistema.executar();
            } catch (Exception e) {
                System.out.println(e.getMessage());
            }
