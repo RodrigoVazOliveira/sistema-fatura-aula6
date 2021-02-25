@@ -17,33 +17,31 @@ public class Controle {
         opcoes.put("4","opcaoQuatro");
     }
 
-    public boolean selecionarOpcao(String opcao) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+    public void selecionarOpcao(String opcao) throws Exception {
         Method method = this.getClass().getMethod(opcoes.get(opcao));
-        return (boolean) method.invoke(this);
+        method.invoke(this);
+
     }
 
-    public boolean opcaoUm() throws Exception {
+    public void opcaoUm() throws Exception {
         List<Fatura> fatura = pesquisarFatura();
         System.out.println(fatura);
-        return true;
     }
 
-    public boolean opcaoDois() throws Exception {
+    public void opcaoDois() throws Exception {
         Consumidor consumidor = cadastrarConsumidor();
         System.out.println(consumidor);
-        return true;
     }
 
-    public boolean opcaoTres() throws Exception {
+    public void opcaoTres() throws Exception {
         Fatura fatura = cadastrarFatura();
         System.out.println(fatura);
-        return true;
     }
 
-    public Boolean opcaoQuatro() throws IOException {
+    public void opcaoQuatro() throws IOException {
         ServicoConsumidor.gravarListaConsumidorNoArquivo();
         ServicoFatura.gravarListaDeFaturaNoArquivo();
-        return false;
+        Sistema.setExecutar(false);
     }
 
     private List<Fatura> pesquisarFatura() throws Exception {
