@@ -9,15 +9,15 @@ public class ServicoFatura {
     private static List<Fatura> faturas = new ArrayList<>();
 
     public static List<Fatura> pesquisarFaturaPeloEmailDoConsumidor(String email) throws Exception {
-        List<Fatura> faturasConsumidor = new ArrayList<>();
-        faturasConsumidor = faturas.stream().filter(obj -> obj.getConsumidor().getEmail().equals(email))
+        List<Fatura> faturasConsumidor = null;
+        faturasConsumidor = faturas.stream().filter(obj -> obj.getConsumidor().getEmail().equalsIgnoreCase(email))
                 .collect(Collectors.toList());
 /*        for(Fatura fatura : faturas) {
             if (fatura.getConsumidor().getEmail().equalsIgnoreCase(email)) {
                 faturasConsumidor.add(fatura);
             }
         }*/
-        if (!faturasConsumidor.isEmpty()) {
+        if (faturasConsumidor.size() != 0) {
             return faturasConsumidor;
         } else {
             throw new Exception("Não existe fatura para esse consumidor!");
